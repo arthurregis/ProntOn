@@ -6,6 +6,7 @@
 package view;
 
 import controller.ConsultaController;
+import document.gerarPdf.GerarPdfConsulta;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
@@ -16,6 +17,8 @@ import util.classes.consulta.Consulta;
  */
 public class TelaVisualizarConsulta extends javax.swing.JFrame {
     ConsultaController consultaController = new ConsultaController();
+    GerarPdfConsulta gerarPdf = new GerarPdfConsulta();
+    int id;
     /**
      * Creates new form cadastrar_medico
      */
@@ -25,6 +28,7 @@ public class TelaVisualizarConsulta extends javax.swing.JFrame {
     }
     
     public void preencherDados(int id){
+        this.id = id;
         Consulta con = new Consulta(consultaController.getConsulta(id));
         CampoNomeMed.setText(con.getMedNome());
         CampoNome.setText(con.getPacNome());
@@ -60,6 +64,7 @@ public class TelaVisualizarConsulta extends javax.swing.JFrame {
         campoProntuario = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
+        gerarPdfBtn = new javax.swing.JButton();
 
         jLabel8.setText("jLabel8");
 
@@ -169,7 +174,15 @@ public class TelaVisualizarConsulta extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 110, 40));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 110, 50));
+
+        gerarPdfBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pdf (1).png"))); // NOI18N
+        gerarPdfBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gerarPdfBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(gerarPdfBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 20, 110, 50));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 710, 120));
 
@@ -187,6 +200,11 @@ public class TelaVisualizarConsulta extends javax.swing.JFrame {
     private void CampoNomeMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoNomeMedActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CampoNomeMedActionPerformed
+
+    private void gerarPdfBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarPdfBtnActionPerformed
+        gerarPdf.gerarPdfConsulta(CampoNomeMed.getText(), CampoNome.getText(), 
+                CampoRG.getText(), CampoDataC.getText(), CampoHorario.getText(), campoProntuario.getText(), this.id);
+    }//GEN-LAST:event_gerarPdfBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,6 +284,7 @@ public class TelaVisualizarConsulta extends javax.swing.JFrame {
     private javax.swing.JTextField CampoRG;
     private javax.swing.JTextArea campoProntuario;
     private javax.swing.JTextField campoidd;
+    private javax.swing.JButton gerarPdfBtn;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox5;
