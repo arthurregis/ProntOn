@@ -31,9 +31,7 @@ public class GerarPdfConsulta {
         try {
             PdfWriter.getInstance(documento, new FileOutputStream("prontuario-"+id+".pdf"));
             documento.open();
-            documento.add(new Paragraph("                   Consulta                            "));
-            documento.add(new Paragraph(""));
-            documento.add(new Paragraph(""));
+            documento.add(new Paragraph("========================Consulta=========================="));
             documento.add(new Paragraph("Id da consulta: " +id));
             documento.add(new Paragraph("Medico: "+medNome));
             documento.add(new Paragraph("Paciente: "+pacNome));
@@ -56,12 +54,14 @@ public class GerarPdfConsulta {
         try {
             PdfWriter.getInstance(documento, new FileOutputStream(nomePdf));
             documento.open();
-            documento.add(new Paragraph("                   Historico de onsultas                            "));
-            documento.add(new Paragraph("====================================================================="));
-            documento.add(new Paragraph("                   Dados do Paciente                                 "));
+            documento.add(new Paragraph("======================Historico de consultas========================="));
+            documento.add(new Paragraph("."));
+            documento.add(new Paragraph("."));
+            documento.add(new Paragraph("."));
+            documento.add(new Paragraph("==============================Dados do Paciente======================"));
             documento.add(new Paragraph("Paciente: "+consultasPacList.get(0).getPacNome()));
             documento.add(new Paragraph("Registro Geral do Paciente: "+consultasPacList.get(0).getPacRG()));
-            documento.add(new Paragraph("====================================================================="));
+            documento.add(new Paragraph("======================================================================"));
             
             for(Consulta con : consultasPacList){
                 documento.add(new Paragraph("Id da consulta: " +con.getIdConsulta()));
@@ -70,7 +70,7 @@ public class GerarPdfConsulta {
                 documento.add(new Paragraph("Horario da consulta: "+con.getHorario()));
                 documento.add(new Paragraph("====================================================================="));
             }
-            documento.add(new Paragraph("                   Prontuario                                 "));
+            documento.add(new Paragraph("===========================Prontuario==============================="));
             documento.add(new Paragraph("Paciente: "+consultasPacList.get(0).getProntuario()));
             documento.close();
         } catch (FileNotFoundException | DocumentException ex) {
