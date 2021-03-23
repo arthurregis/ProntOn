@@ -176,6 +176,8 @@ public class TelaVisualizarConsulta extends javax.swing.JFrame {
         });
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 110, 50));
 
+        gerarPdfBtn.setBackground(new java.awt.Color(255, 255, 255));
+        gerarPdfBtn.setForeground(new java.awt.Color(102, 153, 255));
         gerarPdfBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pdf (1).png"))); // NOI18N
         gerarPdfBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

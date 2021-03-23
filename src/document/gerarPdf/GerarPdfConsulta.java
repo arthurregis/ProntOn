@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
+import util.classes.consulta.Consulta;
 
 /**
  *
@@ -29,6 +31,7 @@ public class GerarPdfConsulta {
         try {
             PdfWriter.getInstance(documento, new FileOutputStream("prontuario-"+id+".pdf"));
             documento.open();
+            documento.add(new Paragraph("                   Consulta                            "));
             documento.add(new Paragraph(""));
             documento.add(new Paragraph(""));
             documento.add(new Paragraph("Id da consulta: " +id));
@@ -46,6 +49,36 @@ public class GerarPdfConsulta {
         abrirPdf(nomePdf);
     }
     
+    public void gerarTodasConsultasPac(List<Consulta> consultasPacList) {
+        String nomePdf = "Consultas-"+consultasPacList.get(0).getPacRG()+".pdf";
+        Document documento = new Document();
+        
+        try {
+            PdfWriter.getInstance(documento, new FileOutputStream(nomePdf));
+            documento.open();
+            documento.add(new Paragraph("                   Historico de onsultas                            "));
+            documento.add(new Paragraph("====================================================================="));
+            documento.add(new Paragraph("                   Dados do Paciente                                 "));
+            documento.add(new Paragraph("Paciente: "+consultasPacList.get(0).getPacNome()));
+            documento.add(new Paragraph("Registro Geral do Paciente: "+consultasPacList.get(0).getPacRG()));
+            documento.add(new Paragraph("====================================================================="));
+            
+            for(Consulta con : consultasPacList){
+                documento.add(new Paragraph("Id da consulta: " +con.getIdConsulta()));
+                documento.add(new Paragraph("Medico: "+con.getMedNome()));
+                documento.add(new Paragraph("Data da consulta: "+con.getData()));
+                documento.add(new Paragraph("Horario da consulta: "+con.getHorario()));
+                documento.add(new Paragraph("====================================================================="));
+            }
+            documento.add(new Paragraph("                   Prontuario                                 "));
+            documento.add(new Paragraph("Paciente: "+consultasPacList.get(0).getProntuario()));
+            documento.close();
+        } catch (FileNotFoundException | DocumentException ex) {
+            System.out.println("Erro ao gerar pdf: "+ex);    
+        }
+        abrirPdf(nomePdf);
+    }
+    
     public void abrirPdf(String nomePdf){
         
         try {
@@ -55,4 +88,5 @@ public class GerarPdfConsulta {
         }
         
     }
+
 }

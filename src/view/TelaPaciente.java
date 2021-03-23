@@ -6,6 +6,7 @@
 package view;
 
 import controller.ConsultaController;
+import document.gerarPdf.GerarPdfConsulta;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.logging.Level;
@@ -20,6 +21,7 @@ import util.classes.consulta.Consulta;
  */
 public class TelaPaciente extends javax.swing.JFrame {
     ConsultaController consultaController = new ConsultaController();
+    GerarPdfConsulta gerarPdf = new GerarPdfConsulta();
     String cpfPac;
 
     /**
@@ -60,6 +62,7 @@ public class TelaPaciente extends javax.swing.JFrame {
         btnVisualizar = new javax.swing.JButton();
         txtA = new javax.swing.JLabel();
         Selecao = new javax.swing.JComboBox<>();
+        gerarPdfBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnSair = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -228,6 +231,15 @@ public class TelaPaciente extends javax.swing.JFrame {
         });
         jPanel1.add(Selecao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 30));
 
+        gerarPdfBtn.setBackground(new java.awt.Color(102, 153, 255));
+        gerarPdfBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pdf (1).png"))); // NOI18N
+        gerarPdfBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gerarPdfBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(gerarPdfBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 120, 30));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 600, 330));
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 255));
@@ -279,6 +291,10 @@ public class TelaPaciente extends javax.swing.JFrame {
             Logger.getLogger(TelaMedico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnVisualizarActionPerformed
+
+    private void gerarPdfBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarPdfBtnActionPerformed
+            gerarPdf.gerarTodasConsultasPac(consultaController.gerarTabelaPacConsultas(cpfPac));       
+    }//GEN-LAST:event_gerarPdfBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -454,6 +470,7 @@ public class TelaPaciente extends javax.swing.JFrame {
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizar;
+    private javax.swing.JButton gerarPdfBtn;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
