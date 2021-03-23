@@ -29,7 +29,6 @@ public class GerarPdfConsulta {
         try {
             PdfWriter.getInstance(documento, new FileOutputStream("prontuario-"+id+".pdf"));
             documento.open();
-            documento.add(new Paragraph("================Consulta================"));
             documento.add(new Paragraph(""));
             documento.add(new Paragraph(""));
             documento.add(new Paragraph("Id da consulta: " +id));
@@ -39,9 +38,12 @@ public class GerarPdfConsulta {
             documento.add(new Paragraph("Data da consulta: "+data));
             documento.add(new Paragraph("Horario da consulta: "+horario ));
             documento.add(new Paragraph("Prontuario do Paciente: " +prontuario));
+            documento.close();
         } catch (FileNotFoundException | DocumentException ex) {
             System.out.println("Erro ao gerar pdf: "+ex);            
         }
+        
+        abrirPdf(nomePdf);
     }
     
     public void abrirPdf(String nomePdf){
