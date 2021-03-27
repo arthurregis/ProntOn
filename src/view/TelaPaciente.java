@@ -5,6 +5,7 @@
  */
 package view;
 
+import chat.ChatCliente;
 import controller.ConsultaController;
 import document.gerarPdf.GerarPdfConsulta;
 import java.io.IOException;
@@ -63,6 +64,7 @@ public class TelaPaciente extends javax.swing.JFrame {
         txtA = new javax.swing.JLabel();
         Selecao = new javax.swing.JComboBox<>();
         gerarPdfBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnSair = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -240,7 +242,16 @@ public class TelaPaciente extends javax.swing.JFrame {
         });
         jPanel1.add(gerarPdfBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 120, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 600, 330));
+        jButton1.setBackground(new java.awt.Color(102, 153, 255));
+        jButton1.setText("Abrir Chat");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 110, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 600, 380));
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -295,6 +306,10 @@ public class TelaPaciente extends javax.swing.JFrame {
     private void gerarPdfBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarPdfBtnActionPerformed
             gerarPdf.gerarTodasConsultasPac(consultaController.gerarTabelaPacConsultas(cpfPac));       
     }//GEN-LAST:event_gerarPdfBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new ChatCliente().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -471,6 +486,7 @@ public class TelaPaciente extends javax.swing.JFrame {
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizar;
     private javax.swing.JButton gerarPdfBtn;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
