@@ -192,8 +192,11 @@ public class TelaCadastrarEnf extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        enfermController.addEnferm(CampoNome.getText(),
+        if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
+            enfermController.addEnferm(CampoNome.getText(),
                 CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), CampoCPF.getText(), CampoSenha.getText(), sexo);        
+            this.dispose();
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

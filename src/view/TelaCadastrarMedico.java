@@ -278,10 +278,12 @@ public class TelaCadastrarMedico extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        medicoController.addMedico(CampoNome.getText(),
+        if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
+            medicoController.addMedico(CampoNome.getText(),
                 CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), CampoCPF.getText(),
-                CampoSenha.getText(), sexo, CampoRG.getText(), CampoEsp.getText(), CampoDep.getText());  
-        
+                CampoSenha.getText(), sexo, CampoRG.getText(), CampoEsp.getText(), CampoDep.getText()); 
+            this.dispose();
+        }       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void CheckFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckFemininoActionPerformed

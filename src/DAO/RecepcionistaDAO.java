@@ -25,7 +25,7 @@ public class RecepcionistaDAO {
                 + "values('"+nome+"','"+cpf+"','"+RG+"','"+telefone+"','"+endereco+"','"+sexo+"','"+senha+"','"+tipo+"')";
         int res = conex.executaSQL(sql);
         if(res > 0){
-            JOptionPane.showMessageDialog(null, "Cadastrou");
+            JOptionPane.showMessageDialog(null, "Cadastro realizado!");
             System.out.println("Cadastro realizado");
         }else{
             JOptionPane.showMessageDialog(null, "Error.");

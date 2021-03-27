@@ -27,7 +27,7 @@ public class PacienteDAO {
                 + "values('"+nome+"','"+cpf+"','"+rg+"','"+telefone+"','"+endereco+"','"+sexo+"','"+dataNasc+"','"+senha+"','"+tipo+"')";
             int res = conex.executaSQL(sql);
             if(res > 0){
-                JOptionPane.showMessageDialog(null, "Cadastrou");
+                JOptionPane.showMessageDialog(null, "Cadastro realizado!");
                 System.out.println("Cadastro realizado");
             }else{
                 JOptionPane.showMessageDialog(null, "Error.");

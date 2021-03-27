@@ -309,11 +309,13 @@ public class TelaCadastrarPaciente extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        String dataNasc = Nasc01.getText() +"/"+ Nasc02.getText() +"/"+ Nasc03.getText();
+        if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
+           String dataNasc = Nasc01.getText() +"/"+ Nasc02.getText() +"/"+ Nasc03.getText();
         
-        pacienteController.addPaciente(CampoNome.getText(), CampoCPF.getText()
-        , CampoRG.getText(), CampoTelefone.getText(), CampoEndereco.getText(), sexo, dataNasc, CampoSenha.getText());
-        dispose();
+            pacienteController.addPaciente(CampoNome.getText(), CampoCPF.getText()
+            , CampoRG.getText(), CampoTelefone.getText(), CampoEndereco.getText(), sexo, dataNasc, CampoSenha.getText());
+            dispose(); 
+        }       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

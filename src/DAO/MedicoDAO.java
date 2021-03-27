@@ -30,7 +30,7 @@ public class MedicoDAO {
         int res = conex.executaSQL(sql);
         if(res > 0){
 
-            JOptionPane.showMessageDialog(null, "Cadastrou!");
+            JOptionPane.showMessageDialog(null, "Cadastro realizado!");
 
             System.out.println("Cadastro realizado");
         }else{
