@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package chat;
+package util.chat;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -117,13 +117,30 @@ public class ChatServidor extends javax.swing.JFrame {
         try {
             String msgout = msg.getText();
             dout.writeUTF(msgout); //enviar a msg do servidor para o cliente
-            msgArea.setText(msgArea.getText()+"\n Equipe ProntOn: "+msg.getText()+"\n");
+            msgArea.setText(msgArea.getText()+"\n Equipe ProntOn: "+msg.getText());
             msg.setText(""); // apagar a msg q acabou de enviar
         } catch (Exception ex) {
             System.out.println("erro ao enviar msg: "+ex);
         }
     }//GEN-LAST:event_enviarActionPerformed
-
+    public void receberMsg(){
+        try {
+            ss = new ServerSocket(3666); //porta em que o servidor ira rodar
+            s = ss.accept(); //servidor aceita conexao
+            
+            din = new DataInputStream(s.getInputStream());
+            dout = new DataOutputStream(s.getOutputStream());
+            String msgin = "";
+            while(!msgin.equals("sair")){
+                msgin = din.readUTF();
+                msgArea.setText(msgArea.getText()+"\n Cliente:"+msgin); // printar a msg na tela msgArea do client-side
+                System.out.println("msg : " +msgin);
+            }
+            msgArea.setText(msgArea.getText()+"\n Conexao encerrada, Tenha um Bom dia!");
+        }catch(Exception ex){
+            System.out.println("Error: "+ex);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -157,24 +174,6 @@ public class ChatServidor extends javax.swing.JFrame {
                 new ChatServidor().setVisible(true);
             }
         });
-        
-        
-        try {
-            ss = new ServerSocket(3666); //porta em que o servidor ira rodar
-            s = ss.accept(); //servidor aceita conexao
-            
-            din = new DataInputStream(s.getInputStream());
-            dout = new DataOutputStream(s.getOutputStream());
-            String msgin = "";
-            while(!msgin.equals("sair")){
-                msgin = din.readUTF();
-                msgArea.setText(msgArea.getText()+"\n Cliente:"+msgin); // printar a msg na tela msgArea do client-side
-                System.out.println("msg : " +msgin);
-            }
-            msgArea.setText(msgArea.getText()+"\n Conexao encerrada, Tenha um Bom dia!");
-        }catch(Exception ex){
-            System.out.println("Error: "+ex);
-        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

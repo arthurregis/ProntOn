@@ -5,7 +5,7 @@
  */
 package view;
 
-import chat.ChatCliente;
+import util.chat.ChatCliente;
 import controller.ConsultaController;
 import document.gerarPdf.GerarPdfConsulta;
 import java.io.IOException;
@@ -308,7 +308,9 @@ public class TelaPaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_gerarPdfBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new ChatCliente().setVisible(true);
+        ChatCliente telaCliente = new ChatCliente();
+        telaCliente.setVisible(true);
+        telaCliente.receberMsg();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

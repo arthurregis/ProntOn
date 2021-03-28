@@ -6,7 +6,7 @@
  */
 package view;
 
-import chat.ChatServidor;
+import util.chat.ChatServidor;
 import controller.ConsultaController;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
@@ -319,7 +319,9 @@ public class TelaRecepcionista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadastrar1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new ChatServidor().setVisible(true);
+        ChatServidor telaServidor = new ChatServidor();
+        telaServidor.setVisible(true);
+        telaServidor.receberMsg();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
