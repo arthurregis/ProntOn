@@ -79,6 +79,23 @@ public class GerarPdfConsulta {
         abrirPdf(nomePdf);
     }
     
+    public void gerarChat(String chat){
+        String nomePdf = "Historico-chat.pdf";
+        Document documento = new Document();
+        
+
+        try {
+            PdfWriter.getInstance(documento, new FileOutputStream(nomePdf));
+            documento.open();
+            documento.add(new Paragraph(chat));
+            documento.close();
+        } catch (FileNotFoundException | DocumentException ex) {
+            System.out.println("Erro ao gerrar pdf:"+ex);
+        }
+        abrirPdf(nomePdf);
+       
+    }
+    
     public void abrirPdf(String nomePdf){
         
         try {
