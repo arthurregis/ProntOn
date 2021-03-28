@@ -49,6 +49,7 @@ public class ChatServidor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        msgArea.setEditable(false);
         msgArea.setColumns(20);
         msgArea.setRows(5);
         jScrollPane1.setViewportView(msgArea);
