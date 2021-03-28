@@ -308,9 +308,11 @@ public class TelaPaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_gerarPdfBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ChatCliente telaCliente = new ChatCliente();
-        telaCliente.setVisible(true);
-        telaCliente.receberMsg();
+        try{
+            new ChatCliente().setVisible(true);
+        }catch(Exception ex){
+            System.out.println("erro ao tentar abrir a tela do chat: "+ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

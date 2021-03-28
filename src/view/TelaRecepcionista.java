@@ -319,9 +319,11 @@ public class TelaRecepcionista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadastrar1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ChatServidor telaServidor = new ChatServidor();
-        telaServidor.setVisible(true);
-        telaServidor.receberMsg();
+        try{
+            new ChatServidor().setVisible(true);
+        }catch(Exception ex){
+            System.out.println("erro ao tentar abrir a tela do chat: "+ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

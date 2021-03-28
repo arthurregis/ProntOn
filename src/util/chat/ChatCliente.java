@@ -5,16 +5,17 @@
  */
 package util.chat;
 
+import java.awt.Color;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
+import javax.swing.JButton;
 
 /**
  *
  * @author cleit
  */
 public class ChatCliente extends javax.swing.JFrame {
-
     /**
      * Creates new form ChatCliente
      */
@@ -40,6 +41,7 @@ public class ChatCliente extends javax.swing.JFrame {
         enviar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +80,14 @@ public class ChatCliente extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jButton1.setBackground(new java.awt.Color(102, 153, 255));
+        jButton1.setText("Conectar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,13 +96,15 @@ public class ChatCliente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
                 .addGap(56, 56, 56))
-            .addGroup(layout.createSequentialGroup()
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(msg)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(enviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(43, 43, 43))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,7 +112,9 @@ public class ChatCliente extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(msg, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -114,18 +128,30 @@ public class ChatCliente extends javax.swing.JFrame {
         try {
             String msgout = msg.getText();
             dout.writeUTF(msgout); //enviar a msg do cliente para o servidor
-            msgArea.setText(msgArea.getText()+"\n Cliente: "+msg.getText());
+            msgArea.setText(msgArea.getText()+"\n Eu: "+msg.getText());
             msg.setText(""); //apagar a msg que acabou de enviar
         } catch (Exception ex) {
             System.out.println("erro ao enviar msg: "+ex);
         }
     }//GEN-LAST:event_enviarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JButton btn = (JButton) evt.getSource();
+        btn.setEnabled(false);
+        btn.setBackground(Color.GREEN);
+        btn.setText("Conectado");
+        receberMsg();
+    }//GEN-LAST:event_jButton1ActionPerformed
     public void receberMsg(){
-        try {
-            s = new Socket("localhost", 3666); //porta em que o cliente ira tentar se conectar
+        new Thread(){
+            @Override
+            public void run(){
+                try {
+            s = new Socket("localhost", 3666); //porta em que o servidor ira rodar
             
             din = new DataInputStream(s.getInputStream());
             dout = new DataOutputStream(s.getOutputStream());
+            System.out.println("conectado");
             String msgin = "";
             while(!msgin.equals("sair")){
                 msgin = din.readUTF();
@@ -136,6 +162,8 @@ public class ChatCliente extends javax.swing.JFrame {
         }catch(Exception ex){
             System.out.println("Error: "+ex);
         }
+            }
+        }.start();
     }
     /**
      * @param args the command line arguments
@@ -174,6 +202,7 @@ public class ChatCliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enviar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
