@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util.chat;
+package util.service.chat;
 
-import document.gerarPdf.GerarPdf;
+import util.service.pdf.GerarPdf;
 import java.awt.Color;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

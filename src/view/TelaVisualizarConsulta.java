@@ -6,7 +6,7 @@
 package view;
 
 import controller.ConsultaController;
-import document.gerarPdf.GerarPdf;
+import util.service.pdf.GerarPdf;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;

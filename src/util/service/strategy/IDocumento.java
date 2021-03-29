@@ -1,4 +1,4 @@
-package util.documentos;
+package util.service.strategy;
 
 public interface IDocumento {
     

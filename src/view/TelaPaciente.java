@@ -5,9 +5,9 @@
  */
 package view;
 
-import util.chat.ChatCliente;
+import util.service.chat.ChatCliente;
 import controller.ConsultaController;
-import document.gerarPdf.GerarPdf;
+import util.service.pdf.GerarPdf;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.logging.Level;

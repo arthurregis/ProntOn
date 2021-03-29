@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package DAO;
+import conexao.Conexao;
 import java.lang.Integer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
