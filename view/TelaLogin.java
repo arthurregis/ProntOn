@@ -70,7 +70,6 @@ public class TelaLogin extends javax.swing.JFrame {
                 }
                 break;
         }
-        //parte do TORTO, fazer conexao
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
