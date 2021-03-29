@@ -24,6 +24,7 @@ public class TelaVisualizarPaciente extends javax.swing.JFrame {
      */
     public TelaVisualizarPaciente(String cpf) throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         preencherDados(cpf);
     }

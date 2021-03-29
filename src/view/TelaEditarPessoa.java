@@ -10,6 +10,9 @@ import java.util.logging.Logger;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import util.classes.pessoa.Pessoa;
+import util.documentos.CPF;
+import util.documentos.IDocumento;
+import util.documentos.RG;
 /**
  *
  * @author HARDWARE
@@ -23,6 +26,7 @@ public class TelaEditarPessoa extends javax.swing.JFrame {
      */
     public TelaEditarPessoa() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     }
     
@@ -211,7 +215,11 @@ public class TelaEditarPessoa extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoTelefoneActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        IDocumento CPF = new CPF();
+        IDocumento RG = new RG();
         String sexo = "";
+        CPF.Documento(CampoCPF.getText());
+        RG.Documento(CampoRG.getText());
         if(CheckMasculino.isSelected()){
             sexo = "M";
         }else if(CheckFeminino.isSelected()){
@@ -219,10 +227,19 @@ public class TelaEditarPessoa extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        admController.editarPessoa(CampoNome.getText(),
+        if(CPF.verificaCodigo()){
+            if(RG.verificaCodigo()){
+                admController.editarPessoa(CampoNome.getText(),
                 CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), 
                 CampoCPF.getText(), CampoRG.getText(), sexo, Nasc.getText(), this.cpf); 
-        this.dispose();
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "RG Inválido! Digite novamente");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "CPF Inválido! Digite novamente");
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

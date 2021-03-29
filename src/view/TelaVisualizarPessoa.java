@@ -22,6 +22,7 @@ public class TelaVisualizarPessoa extends javax.swing.JFrame {
      */
     public TelaVisualizarPessoa() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     }
     

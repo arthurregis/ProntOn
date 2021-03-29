@@ -26,7 +26,7 @@ public class TelaCadastrarConsulta extends javax.swing.JFrame {
         
     public TelaCadastrarConsulta() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
         DefaultTableModel modeloPaciente = (DefaultTableModel) TabelaPac.getModel();
         DefaultTableModel modeloMedico = (DefaultTableModel) TabelaMed.getModel();
         gerarTabelaPac();
@@ -213,7 +213,7 @@ public class TelaCadastrarConsulta extends javax.swing.JFrame {
 
         ano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ano.setForeground(new java.awt.Color(102, 153, 255));
-        ano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2018", "2019", "2020", "2021", "2022", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035" }));
+        ano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040" }));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 153, 255));

@@ -22,6 +22,7 @@ public class TelaVisualizarEnf extends javax.swing.JFrame {
      */
     public TelaVisualizarEnf() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     }
     

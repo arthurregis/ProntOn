@@ -9,6 +9,9 @@ import controller.MedicoController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
+import util.documentos.CPF;
+import util.documentos.IDocumento;
+import util.documentos.RG;
 import javax.swing.JOptionPane;
 /**
  *
@@ -23,6 +26,7 @@ public class TelaCadastrarMedico extends javax.swing.JFrame {
      */
     public TelaCadastrarMedico() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -270,7 +274,12 @@ public class TelaCadastrarMedico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        IDocumento CPF = new CPF();
+        IDocumento RG = new RG();
         String sexo = "";
+        CPF.Documento(CampoCPF.getText());
+        RG.Documento(CampoRG.getText());
+        
         if(CheckMasculino.isSelected()){
             sexo = "M";
         }else if(CheckFeminino.isSelected()){
@@ -278,12 +287,21 @@ public class TelaCadastrarMedico extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
-            medicoController.addMedico(CampoNome.getText(),
-                CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), CampoCPF.getText(),
-                CampoSenha.getText(), sexo, CampoRG.getText(), CampoEsp.getText(), CampoDep.getText()); 
-            this.dispose();
-        }       
+        if(CPF.verificaCodigo()){
+            if(RG.verificaCodigo()){
+                if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
+                medicoController.addMedico(CampoNome.getText(),
+                    CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), CampoCPF.getText(),
+                    CampoSenha.getText(), sexo, CampoRG.getText(), CampoEsp.getText(), CampoDep.getText()); 
+                this.dispose();
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "RG Inválido! Digite novamente");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "CPF Inválido! Digite novamente");
+        }
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void CheckFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckFemininoActionPerformed

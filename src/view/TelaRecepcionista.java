@@ -27,6 +27,7 @@ public class TelaRecepcionista extends javax.swing.JFrame {
      */
     public TelaRecepcionista() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         DefaultTableModel modelo = (DefaultTableModel) Tabela.getModel();
         gerarTabelaConsulta();
@@ -68,7 +69,7 @@ public class TelaRecepcionista extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Secretário(a)");
+        setTitle("Recepcionista");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -257,8 +258,8 @@ public class TelaRecepcionista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        new TelaLogin().setVisible(true);
         dispose();
-
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed

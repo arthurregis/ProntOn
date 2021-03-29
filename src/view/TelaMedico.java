@@ -26,6 +26,7 @@ public class TelaMedico extends javax.swing.JFrame {
      */
     public TelaMedico(String cpf) throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         DefaultTableModel modelo = (DefaultTableModel) Tabela.getModel();
         medCpf = cpf;
@@ -289,8 +290,8 @@ public class TelaMedico extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        new TelaLogin().setVisible(true);
         dispose();
-        ProntOn pl = new ProntOn();
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed

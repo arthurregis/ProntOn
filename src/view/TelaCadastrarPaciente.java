@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import util.documentos.CPF;
+import util.documentos.IDocumento;
+import util.documentos.RG;
 
 /**
  *
@@ -24,6 +27,7 @@ public class TelaCadastrarPaciente extends javax.swing.JFrame {
      */
     public TelaCadastrarPaciente() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -301,7 +305,11 @@ public class TelaCadastrarPaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_CheckFemininoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        IDocumento CPF = new CPF();
+        IDocumento RG = new RG();
         String sexo = "";
+        CPF.Documento(CampoCPF.getText());
+        RG.Documento(CampoRG.getText());
         if(CheckMasculino.isSelected()){
             sexo = "M";
         }else if(CheckFeminino.isSelected()){
@@ -309,13 +317,22 @@ public class TelaCadastrarPaciente extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
-           String dataNasc = Nasc01.getText() +"/"+ Nasc02.getText() +"/"+ Nasc03.getText();
-        
-            pacienteController.addPaciente(CampoNome.getText(), CampoCPF.getText()
-            , CampoRG.getText(), CampoTelefone.getText(), CampoEndereco.getText(), sexo, dataNasc, CampoSenha.getText());
-            dispose(); 
-        }       
+        if(CPF.verificaCodigo()){
+            if(RG.verificaCodigo()){
+                if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
+                    String dataNasc = Nasc01.getText() +"/"+ Nasc02.getText() +"/"+ Nasc03.getText();
+
+                     pacienteController.addPaciente(CampoNome.getText(), CampoCPF.getText()
+                     , CampoRG.getText(), CampoTelefone.getText(), CampoEndereco.getText(), sexo, dataNasc, CampoSenha.getText());
+                     dispose(); 
+                 }  
+            }else{
+                JOptionPane.showMessageDialog(null, "RG Inválido! Digite novamente");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "CPF Inválido! Digite novamente");
+        }
+             
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

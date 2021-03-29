@@ -7,6 +7,9 @@ package view;
 import controller.EnfermController;
 import java.io.IOException;
 import javax.swing.JOptionPane;
+import util.documentos.CPF;
+import util.documentos.IDocumento;
+import util.documentos.RG;
 /**
  *
  * @author HARDWARE
@@ -20,6 +23,7 @@ public class TelaCadastrarEnf extends javax.swing.JFrame {
      */
     public TelaCadastrarEnf() throws IOException {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     }
     
@@ -184,7 +188,9 @@ public class TelaCadastrarEnf extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoTelefoneActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        IDocumento CPF = new CPF();
         String sexo = "";
+        CPF.Documento(CampoCPF.getText());
         if(CheckMasculino.isSelected()){
             sexo = "M";
         }else if(CheckFeminino.isSelected()){
@@ -192,11 +198,16 @@ public class TelaCadastrarEnf extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Selecione um Sexo!");
         }
-        if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
-            enfermController.addEnferm(CampoNome.getText(),
-                CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), CampoCPF.getText(), CampoSenha.getText(), sexo);        
-            this.dispose();
-        } 
+        if(CPF.verificaCodigo()){
+            if(CheckMasculino.isSelected() || CheckFeminino.isSelected()){
+                enfermController.addEnferm(CampoNome.getText(),
+                    CampoSobrenome.getText(), CampoEndereco.getText(), CampoTelefone.getText(), CampoCPF.getText(), CampoSenha.getText(), sexo);        
+                this.dispose();
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "CPF Inválido! Digite novamente");
+        }
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
