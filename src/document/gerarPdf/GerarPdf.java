@@ -21,7 +21,7 @@ import util.classes.consulta.Consulta;
  *
  * @author cleit
  */
-public class GerarPdfConsulta {
+public class GerarPdf {
     
     public void gerarPdfConsulta(String medNome, String pacNome, String pacRG, 
             String data, String horario, String prontuario, int id){

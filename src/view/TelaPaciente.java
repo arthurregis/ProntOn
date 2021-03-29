@@ -7,7 +7,7 @@ package view;
 
 import util.chat.ChatCliente;
 import controller.ConsultaController;
-import document.gerarPdf.GerarPdfConsulta;
+import document.gerarPdf.GerarPdf;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.logging.Level;
@@ -22,7 +22,7 @@ import util.classes.consulta.Consulta;
  */
 public class TelaPaciente extends javax.swing.JFrame {
     ConsultaController consultaController = new ConsultaController();
-    GerarPdfConsulta gerarPdf = new GerarPdfConsulta();
+    GerarPdf gerarPdf = new GerarPdf();
     String cpfPac;
 
     /**

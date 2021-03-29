@@ -6,7 +6,7 @@
 package view;
 
 import controller.ConsultaController;
-import document.gerarPdf.GerarPdfConsulta;
+import document.gerarPdf.GerarPdf;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import util.classes.consulta.Consulta;
  */
 public class TelaVisualizarConsulta extends javax.swing.JFrame {
     ConsultaController consultaController = new ConsultaController();
-    GerarPdfConsulta gerarPdf = new GerarPdfConsulta();
+    GerarPdf gerarPdf = new GerarPdf();
     int id;
     /**
      * Creates new form cadastrar_medico

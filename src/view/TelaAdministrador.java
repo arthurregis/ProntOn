@@ -318,12 +318,6 @@ public class TelaAdministrador extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(TelaRecepcionista.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }else if(op == "Enfermeiros(a)"){
-            try {
-                new TelaCadastrarEnf().setVisible(true);
-            } catch (IOException ex) {
-                Logger.getLogger(TelaRecepcionista.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }else if(op == "Recepcionistas"){
             try {
                 new TelaCadastrarRecep().setVisible(true);

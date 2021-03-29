@@ -5,7 +5,7 @@
  */
 package util.chat;
 
-import document.gerarPdf.GerarPdfConsulta;
+import document.gerarPdf.GerarPdf;
 import java.awt.Color;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -168,7 +168,7 @@ public class ChatServidor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        GerarPdfConsulta pdf = new GerarPdfConsulta();
+        GerarPdf pdf = new GerarPdf();
         pdf.gerarChat("Historico do Chat \n\n"+msgArea.getText());
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
