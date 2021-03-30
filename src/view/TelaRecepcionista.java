@@ -60,8 +60,6 @@ public class TelaRecepcionista extends javax.swing.JFrame {
         btnExcluir = new javax.swing.JButton();
         btnVisualizar = new javax.swing.JButton();
         btnAtualizar = new javax.swing.JButton();
-        btnPesquisa = new javax.swing.JButton();
-        CampoPesquisa = new javax.swing.JTextField();
         btnCadastrar1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -195,23 +193,6 @@ public class TelaRecepcionista extends javax.swing.JFrame {
         });
         jPanel1.add(btnAtualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 30));
 
-        btnPesquisa.setBackground(new java.awt.Color(102, 153, 255));
-        btnPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lupabranca.png"))); // NOI18N
-        btnPesquisa.setName(""); // NOI18N
-        btnPesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPesquisaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 30, 30));
-
-        CampoPesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CampoPesquisaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(CampoPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 330, 30));
-
         btnCadastrar1.setBackground(new java.awt.Color(102, 153, 255));
         btnCadastrar1.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar1.setText("Cadastrar Paciente");
@@ -303,14 +284,6 @@ public class TelaRecepcionista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnVisualizarActionPerformed
 
-    private void btnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaActionPerformed
-                
-    }//GEN-LAST:event_btnPesquisaActionPerformed
-
-    private void CampoPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoPesquisaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CampoPesquisaActionPerformed
-
     private void btnCadastrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrar1ActionPerformed
        try {
             new TelaCadastrarPaciente().setVisible(true);
@@ -373,14 +346,12 @@ public class TelaRecepcionista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CampoPesquisa;
     private javax.swing.JTable Tabela;
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCadastrar1;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnExcluir;
-    private javax.swing.JButton btnPesquisa;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizar;
     private javax.swing.JButton jButton1;

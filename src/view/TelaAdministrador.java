@@ -48,10 +48,6 @@ public class TelaAdministrador extends javax.swing.JFrame {
         btnExcluir = new javax.swing.JButton();
         btnVisualizar = new javax.swing.JButton();
         btnAtualizar = new javax.swing.JButton();
-        CampoPesquisa = new javax.swing.JTextField();
-        btnPesquisa = new javax.swing.JButton();
-        criterioPesquisa1 = new javax.swing.JComboBox<>();
-        criterioPesquisa2 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         btnSair = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -244,40 +240,6 @@ public class TelaAdministrador extends javax.swing.JFrame {
         });
         jPanel1.add(btnAtualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 30));
 
-        CampoPesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CampoPesquisaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(CampoPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 140, 30));
-
-        btnPesquisa.setBackground(new java.awt.Color(102, 153, 255));
-        btnPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icons/lupabranca.png"))); // NOI18N
-        btnPesquisa.setName(""); // NOI18N
-        btnPesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPesquisaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 30, 30));
-
-        criterioPesquisa1.setBackground(new java.awt.Color(102, 153, 255));
-        criterioPesquisa1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        criterioPesquisa1.setForeground(new java.awt.Color(255, 255, 255));
-        criterioPesquisa1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Nome", "CPF", "RG", "Telefone" }));
-        jPanel1.add(criterioPesquisa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 50, 30));
-
-        criterioPesquisa2.setBackground(new java.awt.Color(102, 153, 255));
-        criterioPesquisa2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        criterioPesquisa2.setForeground(new java.awt.Color(255, 255, 255));
-        criterioPesquisa2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Nome", "Telefone", "CNPJ" }));
-        criterioPesquisa2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                criterioPesquisa2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(criterioPesquisa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 50, 30));
-
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 640, 330));
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 255));
@@ -370,18 +332,6 @@ public class TelaAdministrador extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnVisualizarActionPerformed
 
-    private void btnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaActionPerformed
-        
-    }//GEN-LAST:event_btnPesquisaActionPerformed
-
-    private void criterioPesquisa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criterioPesquisa2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_criterioPesquisa2ActionPerformed
-
-    private void CampoPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoPesquisaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CampoPesquisaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -423,7 +373,6 @@ public class TelaAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CampoPesquisa;
     private javax.swing.JScrollPane ScrollTab;
     private javax.swing.JComboBox<String> Selecao;
     private javax.swing.JTable Tabela;
@@ -431,11 +380,8 @@ public class TelaAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnExcluir;
-    private javax.swing.JButton btnPesquisa;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizar;
-    private javax.swing.JComboBox<String> criterioPesquisa1;
-    private javax.swing.JComboBox<String> criterioPesquisa2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

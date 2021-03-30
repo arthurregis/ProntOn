@@ -62,9 +62,6 @@ public class TelaMedico extends javax.swing.JFrame {
         Tabela = new javax.swing.JTable();
         btnVisualizar = new javax.swing.JButton();
         txtA = new javax.swing.JLabel();
-        btnPesquisa = new javax.swing.JButton();
-        CampoPesquisa = new javax.swing.JTextField();
-        criterioPesquisa3 = new javax.swing.JComboBox<>();
         Selecao = new javax.swing.JComboBox<>();
         btnEditar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -227,24 +224,6 @@ public class TelaMedico extends javax.swing.JFrame {
         txtA.setText("Todas as Suas Consultas Marcadas");
         jPanel1.add(txtA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 450, 30));
 
-        btnPesquisa.setBackground(new java.awt.Color(102, 153, 255));
-        btnPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lupabranca.png"))); // NOI18N
-        btnPesquisa.setName(""); // NOI18N
-        btnPesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPesquisaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 40, 30));
-        jPanel1.add(CampoPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 180, 30));
-
-        criterioPesquisa3.setBackground(new java.awt.Color(102, 153, 255));
-        criterioPesquisa3.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        criterioPesquisa3.setForeground(new java.awt.Color(255, 255, 255));
-        criterioPesquisa3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome do Paciente", "Data de Nascimento", "Data da Consulta", "Horário da Consulta" }));
-        criterioPesquisa3.setBorder(null);
-        jPanel1.add(criterioPesquisa3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 70, 30));
-
         Selecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Consultas Marcadas", "Consultas Realizadas" }));
         Selecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,10 +289,6 @@ public class TelaMedico extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnVisualizarActionPerformed
 
-    private void btnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaActionPerformed
-        
-    }//GEN-LAST:event_btnPesquisaActionPerformed
-
     private void SelecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelecaoActionPerformed
         
     }//GEN-LAST:event_SelecaoActionPerformed
@@ -347,15 +322,12 @@ public class TelaMedico extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CampoID;
     private javax.swing.JTextField CampoNomeMedico;
-    private javax.swing.JTextField CampoPesquisa;
     private javax.swing.JComboBox<String> Selecao;
     private javax.swing.JTable Tabela;
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnPesquisa;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizar;
-    private javax.swing.JComboBox<String> criterioPesquisa3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
