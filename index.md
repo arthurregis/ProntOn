@@ -43,6 +43,9 @@ O intuito do ProntOn e ser uma aplicação desktop simples e prática, todas a
 
 ## Equipe ProntOn
 Documentação: [Arthur Régis de Oliveira Gomes.](https://github.com/arthurregis)
+
 Front-end e Back-end: [Bergson Serafim de Souza.](https://github.com/BergSouza)
+
 Front-end e Back-end: [Cleiton dos Santos Queiroz.](https://github.com/viktorsoares)
+
 Banco de Dados e Back-end: [João Vitor Soares Furtado.](https://github.com/Cleiton366)
