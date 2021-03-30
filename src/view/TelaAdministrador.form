@@ -238,7 +238,7 @@
               <Color blue="ff" green="99" red="66" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/lupabranca.png"/>
+              <Image iconType="3" name="/assets/icons/lupaazul.png"/>
             </Property>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
