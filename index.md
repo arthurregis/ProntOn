@@ -10,10 +10,12 @@ Portanto nosso sistema busca:
 ● Diminuir o tempo de atendimento. Com um prontuário digital, o tempo em
 média de um atendimento médico seria menor comparado com um prontuário
 normal de escrita.
+
 ● Um prontuário digital seria mais seguro que um prontuário em papel. Já que o
 prontuário digital estaria salvo em um banco de dados, facilitando a segurança
 das informações e tendo seu acesso facilitado, e um prontuário normal pode ser
 facilmente perdido ou danificado.
+
 ● Facilitar o envio do prontuário para onde e quantas vezes quiser, já que não
 está preso à uma folha de papel.
 
