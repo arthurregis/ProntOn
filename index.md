@@ -69,6 +69,14 @@ A tela do médico também contem uma tabela. Neste caso, a tabela na tela do mé
 O médico também poderá editar ou visualizar uma consulta. Basta clicar na consulta desejada na tabela e posteriormente clicar em editar ou visualizar.
 ![2021-04-01 20-12-34](https://user-images.githubusercontent.com/57187549/113363268-d36b5880-9326-11eb-897e-ed20b31fa904.gif)
 
+### Tela da Recepcionista
+A tela da recepcionista também conta com uma tabela, essa tabela contem todas as consultas cadastradas na base de dados do nosso sistema. Na tela da recepcionista, a recepcionista sera capaz de cadastrar pacientes e consultas. Também sera possível editar, visualizar e excluir uma consulta. O processo e o mesmo que as demais telas. Basta clicar em um item na tabela para editar, visualizar ou excluir.
+![2021-04-01 20-27-54](https://user-images.githubusercontent.com/57187549/113364291-7cb34e00-9329-11eb-8cbd-9f5b1374448c.gif)
+Nosso sistema também conta com a funcionalidade de gerar PDF. A recepcionista poderá gerar um PDF de uma consulta, seja para imprimir ou enviar por e-mail. Para gerar um PDF, basta clicar em um item da tabela e depois visualizar. Ao clicar em visualizar, basta clicar no botão com o símbolo do PDF.
+![2021-04-01 20-29-23](https://user-images.githubusercontent.com/57187549/113364500-1549ce00-932a-11eb-8012-f72abe5bc3f9.gif)
+A recepcionista também sera capaz de efetuar o cadastro de um paciente no nosso sistema.
+![2021-04-01 20-30-17](https://user-images.githubusercontent.com/57187549/113364531-2bf02500-932a-11eb-85dd-38f41a0f61ee.gif)
+
 
 
 ## Equipe ProntOn
