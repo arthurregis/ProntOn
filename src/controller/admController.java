@@ -7,7 +7,7 @@ package controller;
 
 import DAO.admDAO;
 import java.util.List;
-import util.classes.pessoa.Pessoa;
+import main.java.pessoa.Pessoa;
 
 /**
  *

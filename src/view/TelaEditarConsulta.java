@@ -9,7 +9,7 @@ import controller.ConsultaController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
-import util.classes.consulta.Consulta;
+import main.java.consulta.Consulta;
 /**
  *
  * @author HARDWARE

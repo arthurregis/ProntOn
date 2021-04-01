@@ -9,7 +9,7 @@ import java.awt.Color;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import pronton.ProntOn;
+import main.java.pronton.ProntOn;
 
 /**
  *

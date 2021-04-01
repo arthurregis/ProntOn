@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import util.classes.pessoa.Pessoa;
+import main.java.pessoa.Pessoa;
 
 
 public class TelaAdministrador extends javax.swing.JFrame {

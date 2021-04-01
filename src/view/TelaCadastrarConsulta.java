@@ -9,8 +9,8 @@ import controller.ConsultaController;
 import controller.MedicoController;
 import controller.PacienteController;
 import javax.swing.table.DefaultTableModel;
-import util.classes.funcionarios.Medico;
-import util.classes.paciente.Paciente;
+import main.java.funcionarios.Medico;
+import main.java.paciente.Paciente;
 
 /**
  *

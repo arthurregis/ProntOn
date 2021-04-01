@@ -7,7 +7,7 @@ package controller;
 
 import DAO.ConsultaDAO;
 import java.util.List;
-import util.classes.consulta.Consulta;
+import main.java.consulta.Consulta;
 
 /**
  *

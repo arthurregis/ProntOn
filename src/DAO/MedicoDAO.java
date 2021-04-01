@@ -6,11 +6,11 @@
 package DAO;
 
 
-import conexao.Conexao;
+import services.conexao.Conexao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import util.classes.funcionarios.Medico;
+import main.java.funcionarios.Medico;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;

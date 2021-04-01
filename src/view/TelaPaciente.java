@@ -5,16 +5,16 @@
  */
 package view;
 
-import util.service.chat.ChatCliente;
+import services.chat.ChatCliente;
 import controller.ConsultaController;
-import util.service.pdf.GerarPdf;
+import services.pdf.GerarPdf;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import pronton.ProntOn;
-import util.classes.consulta.Consulta;
+import main.java.pronton.ProntOn;
+import main.java.consulta.Consulta;
 
 /**
  *

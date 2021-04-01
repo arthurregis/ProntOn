@@ -6,11 +6,11 @@
 package view;
 
 import controller.ConsultaController;
-import util.service.pdf.GerarPdf;
+import services.pdf.GerarPdf;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
-import util.classes.consulta.Consulta;
+import main.java.consulta.Consulta;
 /**
  *
  * @author HARDWARE

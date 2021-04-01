@@ -5,7 +5,7 @@
  */
 package view;
 
-import util.classes.paciente.Paciente;
+import main.java.paciente.Paciente;
 import controller.PacienteController;
 import java.io.IOException;
 import java.util.logging.Level;

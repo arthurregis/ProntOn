@@ -7,7 +7,7 @@ package controller;
 
 
 import DAO.RecepcionistaDAO;
-import util.classes.funcionarios.Recepcionista;
+import main.java.funcionarios.Recepcionista;
 
 /**
  *

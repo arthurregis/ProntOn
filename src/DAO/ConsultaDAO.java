@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package DAO;
-import conexao.Conexao;
+import services.conexao.Conexao;
 import java.lang.Integer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import javax.swing.JOptionPane;
-import util.classes.consulta.Consulta;
+import main.java.consulta.Consulta;
 
 
 /**

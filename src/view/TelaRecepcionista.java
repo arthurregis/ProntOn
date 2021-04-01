@@ -6,14 +6,14 @@
  */
 package view;
 
-import util.service.chat.ChatServidor;
+import services.chat.ChatServidor;
 import controller.ConsultaController;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import util.classes.consulta.Consulta;
+import main.java.consulta.Consulta;
 
 
 /**

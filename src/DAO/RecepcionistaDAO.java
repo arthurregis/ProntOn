@@ -5,12 +5,12 @@
  */
 package DAO;
 
-import conexao.Conexao;
+import services.conexao.Conexao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
-import util.classes.funcionarios.Recepcionista;
+import main.java.funcionarios.Recepcionista;
 
 /**
  *

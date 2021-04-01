@@ -6,7 +6,7 @@
 package controller;
 
 import DAO.MedicoDAO;
-import util.classes.funcionarios.Medico;
+import main.java.funcionarios.Medico;
 import java.util.List;
 
 /**

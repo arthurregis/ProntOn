@@ -5,11 +5,11 @@
  */
 package DAO;
 
-import conexao.Conexao;
+import services.conexao.Conexao;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import util.classes.pessoa.Pessoa;
+import main.java.pessoa.Pessoa;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;

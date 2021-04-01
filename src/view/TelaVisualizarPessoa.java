@@ -8,7 +8,7 @@ import controller.admController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
-import util.classes.pessoa.Pessoa;
+import main.java.pessoa.Pessoa;
 /**
  *
  * @author HARDWARE

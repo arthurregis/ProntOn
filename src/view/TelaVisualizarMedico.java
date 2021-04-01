@@ -5,7 +5,7 @@
  */
 package view;
 
-import util.classes.funcionarios.Medico;
+import main.java.funcionarios.Medico;
 import controller.MedicoController;
 import java.util.logging.Level;
 import java.util.logging.Logger;

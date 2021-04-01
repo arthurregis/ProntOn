@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import conexao.Conexao;
+import services.conexao.Conexao;
 import java.sql.ResultSet;
 import java.sql.Statement;
 

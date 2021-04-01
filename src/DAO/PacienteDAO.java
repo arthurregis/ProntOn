@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import conexao.Conexao;
+import services.conexao.Conexao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-import util.classes.paciente.Paciente;
+import main.java.paciente.Paciente;
 
 /**
  *

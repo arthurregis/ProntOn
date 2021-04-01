@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import util.classes.paciente.Paciente;
+import main.java.paciente.Paciente;
 import java.util.List;
 
 /**
