@@ -52,6 +52,18 @@ Ao abrir nosso sistema, a primeira coisa que se deve fazer e efetuar o login. Te
 ![print_login](https://user-images.githubusercontent.com/57187549/113359438-268cdd80-931e-11eb-9bf6-c3939e035263.png)
 Para efetuar o login, basta inserir um CPF valido e cadastrado na nossa base de dados, e posteriormente sua senha. Você sera direcionado para a tela de acordo com a categoria de sua conta. Podendo ser direcionado para a tela de Administrador, Medico, Recepcionista ou Paciente.
 
+### Tela do Administrador
+A tela do administrador conta com uma tabela robusta na qual o administrador poderá visualizar todos os outros usuários cadastrados na base de dados do sistema. Assim como editar os dados de qualquer pessoa, excluir e visualizar.
+![Tela_adm](https://user-images.githubusercontent.com/57187549/113360669-a0be6180-9320-11eb-985a-584fa71f7555.png)
+O administrador deve clicar em algum usuário na tabela a fim de editar, excluir ou simplesmente visualizar os dados desse usuário.
+![90](https://user-images.githubusercontent.com/57187549/113361037-67d2bc80-9321-11eb-914a-5887712a3dbe.gif)
+
+O Administrador poderá também cadastra na base de dados da aplicação Recepcionistas e Médicos.
+
+### Tela do Medico
+
+
+
 ## Equipe ProntOn
 Documentação e Back-end: [Arthur Régis de Oliveira Gomes.](https://github.com/arthurregis)
 
