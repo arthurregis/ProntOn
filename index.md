@@ -56,10 +56,11 @@ Para efetuar o login, basta inserir um CPF valido e cadastrado na nossa base de 
 A tela do administrador conta com uma tabela robusta na qual o administrador poderá visualizar todos os outros usuários cadastrados na base de dados do sistema. Assim como editar os dados de qualquer pessoa, excluir e visualizar.
 ![Tela_adm](https://user-images.githubusercontent.com/57187549/113360669-a0be6180-9320-11eb-985a-584fa71f7555.png)
 O administrador deve clicar em algum usuário na tabela a fim de editar, excluir ou simplesmente visualizar os dados desse usuário.
-![2021-04-01 19-47-47_Trim](https://user-images.githubusercontent.com/57187549/113361944-8fc31f80-9323-11eb-83f9-a53debac4797.gif)
-
-
+![2021-04-01 19-55-58](https://user-images.githubusercontent.com/57187549/113362328-825a6500-9324-11eb-8510-b123f7a48791.gif)
 O Administrador poderá também cadastra na base de dados da aplicação Recepcionistas e Médicos.
+![2021-04-01 19-58-41](https://user-images.githubusercontent.com/57187549/113362590-16c4c780-9325-11eb-96cc-32ea8fcb68e8.gif)
+
+
 
 ### Tela do Medico
 
