@@ -49,7 +49,7 @@ Nessa sessão, iremos fazer um pequeno tour pela nossa aplicação. Ao final do 
 
 ### Login
 Ao abrir nosso sistema, a primeira coisa que se deve fazer e efetuar o login. Tenha em mente que para efetuar o login no sistema seus dados terão que ser cadastrados na nossa base de dados por alguém já credenciado e que tenha acesso às funções de cadastro.
-![print_login](https://user-images.githubusercontent.com/57187549/113359438-268cdd80-931e-11eb-9bf6-c3939e035263.png)
+![2021-04-01 20-15-13](https://user-images.githubusercontent.com/57187549/113363375-16c5c700-9327-11eb-8df4-5a829aab9146.gif)
 Para efetuar o login, basta inserir um CPF valido e cadastrado na nossa base de dados, e posteriormente sua senha. Você sera direcionado para a tela de acordo com a categoria de sua conta. Podendo ser direcionado para a tela de Administrador, Medico, Recepcionista ou Paciente.
 
 ### Tela do Administrador
@@ -63,6 +63,10 @@ O Administrador poderá também cadastra na base de dados da aplicação Recepci
 
 
 ### Tela do Medico
+A tela do médico também contem uma tabela. Neste caso, a tabela na tela do médico contem todas as suas consultas na qual o médico tera que atender. A tabela também contem o nome do paciente de cada consulta, o RG do paciente, a data e o horário da consulta.
+![telaMedico](https://user-images.githubusercontent.com/57187549/113363093-55a74d00-9326-11eb-9073-0b99f890defa.png)
+O médico também poderá editar ou visualizar uma consulta. Basta clicar na consulta desejada na tabela e posteriormente clicar em editar ou visualizar.
+![2021-04-01 20-12-34](https://user-images.githubusercontent.com/57187549/113363268-d36b5880-9326-11eb-897e-ed20b31fa904.gif)
 
 
 
