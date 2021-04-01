@@ -40,7 +40,6 @@ Para que os pacientes não precisem se deslocarem de suas residências só para 
 O intuito do ProntOn e ser uma aplicação desktop simples e prática, todas as informações, como consultas de um paciente específico, pacientes registrados no sistema ou as consultas de um médico, podem ser facilmente visualizadas através de tabelas geradas pelo sistema.
 
 ![print2](https://user-images.githubusercontent.com/57187549/112927355-3b355f80-90eb-11eb-9769-8c146dbb8ece.png)
-![print4](https://user-images.githubusercontent.com/57187549/112927840-01b12400-90ec-11eb-82e8-d41dd5c56634.png)
 
 
 ## Equipe ProntOn
