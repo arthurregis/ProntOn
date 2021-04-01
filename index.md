@@ -76,8 +76,8 @@ Nosso sistema também conta com a funcionalidade de gerar PDF. A recepcionista p
 ![2021-04-01 20-29-23](https://user-images.githubusercontent.com/57187549/113364500-1549ce00-932a-11eb-8012-f72abe5bc3f9.gif)
 A recepcionista também sera capaz de efetuar o cadastro de um paciente no nosso sistema.
 ![2021-04-01 20-30-17](https://user-images.githubusercontent.com/57187549/113364531-2bf02500-932a-11eb-85dd-38f41a0f61ee.gif)
-
-
+A recepcionista também sera capaz de abrir o chat para atender de forma remota os pacientes. 
+![Print1](https://user-images.githubusercontent.com/57187549/112926650-1db3c600-90ea-11eb-8d27-cf16dddd7a8c.png)
 
 ## Equipe ProntOn
 Documentação e Back-end: [Arthur Régis de Oliveira Gomes.](https://github.com/arthurregis)
