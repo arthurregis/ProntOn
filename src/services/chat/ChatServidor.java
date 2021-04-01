@@ -7,8 +7,10 @@ package services.chat;
 
 import services.pdf.GerarPdf;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import javax.swing.JButton;
@@ -18,7 +20,7 @@ import javax.swing.JOptionPane;
  *
  * @author cleit
  */
-public class ChatServidor extends javax.swing.JFrame {
+public class ChatServidor extends javax.swing.JFrame implements IChat, Observer{
 
     /**
      * Creates new form ChatServidor
@@ -148,14 +150,7 @@ public class ChatServidor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
-        try {
-            String msgout = msg.getText();
-            dout.writeUTF(msgout); //enviar a msg do servidor para o cliente
-            msgArea.setText(msgArea.getText()+"\n Equipe ProntOn: "+msg.getText());
-            msg.setText(""); // apagar a msg q acabou de enviar
-        } catch (Exception ex) {
-            System.out.println("erro ao enviar msg: "+ex);
-        }
+        enviarMsg();
     }//GEN-LAST:event_enviarActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
@@ -172,6 +167,24 @@ public class ChatServidor extends javax.swing.JFrame {
         pdf.gerarChat("Historico do Chat \n\n"+msgArea.getText());
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+    @Override
+    public void enviarMsg(){
+        try {
+            String msgout = msg.getText();
+            dout.writeUTF(msgout); //enviar a msg do servidor para o cliente
+            msgArea.setText(msgArea.getText()+"\n Equipe ProntOn: "+msg.getText());
+            msg.setText(""); // apagar a msg q acabou de enviar
+        } catch (Exception ex) {
+            System.out.println("erro ao enviar msg: "+ex);
+        }
+    }
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if(e.getKeyCode() == KeyEvent.VK_ENTER){
+            enviarMsg();
+        }
+    }
+    @Override
     public void receberMsg(){
         new Thread(){   
            @Override
@@ -196,6 +209,7 @@ public class ChatServidor extends javax.swing.JFrame {
            }       
        }.start();
     }
+    
     /**
      * @param args the command line arguments
      */
@@ -241,4 +255,5 @@ public class ChatServidor extends javax.swing.JFrame {
     private javax.swing.JTextField msg;
     private static javax.swing.JTextArea msgArea;
     // End of variables declaration//GEN-END:variables
+
 }

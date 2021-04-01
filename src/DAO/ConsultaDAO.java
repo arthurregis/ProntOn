@@ -5,7 +5,6 @@
  */
 package DAO;
 import services.conexao.Conexao;
-import java.lang.Integer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;

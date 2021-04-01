@@ -1,4 +1,4 @@
-package services.chat.strategy;
+package services.validardocumentos;
 
 public interface IDocumento {
     

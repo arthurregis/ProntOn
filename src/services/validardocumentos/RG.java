@@ -1,6 +1,6 @@
-package services.chat.strategy;
+package services.validardocumentos;
 
-import services.chat.strategy.IDocumento;
+import services.validardocumentos.IDocumento;
 import javax.swing.JOptionPane;
 
 public class RG implements IDocumento{

@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import services.chat.strategy.CPF;
-import services.chat.strategy.IDocumento;
-import services.chat.strategy.RG;
+import services.validardocumentos.CPF;
+import services.validardocumentos.IDocumento;
+import services.validardocumentos.RG;
 
 /**
  *

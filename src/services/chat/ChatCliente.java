@@ -7,6 +7,7 @@ package services.chat;
 
 import services.pdf.GerarPdf;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
@@ -17,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author cleit
  */
-public class ChatCliente extends javax.swing.JFrame {
+public class ChatCliente extends javax.swing.JFrame implements IChat, Observer{
     /**
      * Creates new form ChatCliente
      */
@@ -144,14 +145,7 @@ public class ChatCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
-        try {
-            String msgout = msg.getText();
-            dout.writeUTF(msgout); //enviar a msg do cliente para o servidor
-            msgArea.setText(msgArea.getText()+"\n Eu: "+msg.getText());
-            msg.setText(""); //apagar a msg que acabou de enviar
-        } catch (Exception ex) {
-            System.out.println("erro ao enviar msg: "+ex);
-        }
+        enviarMsg();
     }//GEN-LAST:event_enviarActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
@@ -162,12 +156,30 @@ public class ChatCliente extends javax.swing.JFrame {
         btn.setText("Conectado");
         receberMsg();
     }//GEN-LAST:event_jButtonActionPerformed
-
+   
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         GerarPdf pdf = new GerarPdf();
         pdf.gerarChat("Historico do Chat \n\n"+msgArea.getText());
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+    @Override
+    public void enviarMsg(){
+        try {
+            String msgout = msg.getText();
+            dout.writeUTF(msgout); //enviar a msg do cliente para o servidor
+            msgArea.setText(msgArea.getText()+"\n Eu: "+msg.getText());
+            msg.setText(""); //apagar a msg que acabou de enviar
+        } catch (Exception ex) {
+            System.out.println("erro ao enviar msg: "+ex);
+        }
+    }
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if(e.getKeyCode() == KeyEvent.VK_ENTER){
+            enviarMsg();
+        }
+    }
+    @Override
     public void receberMsg(){
         new Thread(){
             @Override
