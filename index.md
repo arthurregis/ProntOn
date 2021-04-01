@@ -65,6 +65,7 @@ O Administrador poderá também cadastra na base de dados da aplicação Recepci
 ### Tela do Medico
 A tela do médico também contem uma tabela. Neste caso, a tabela na tela do médico contem todas as suas consultas na qual o médico tera que atender. A tabela também contem o nome do paciente de cada consulta, o RG do paciente, a data e o horário da consulta.
 ![telaMedico](https://user-images.githubusercontent.com/57187549/113363093-55a74d00-9326-11eb-9073-0b99f890defa.png)
+<br>
 O médico também poderá editar ou visualizar uma consulta. Basta clicar na consulta desejada na tabela e posteriormente clicar em editar ou visualizar.
 ![2021-04-01 20-12-34](https://user-images.githubusercontent.com/57187549/113363268-d36b5880-9326-11eb-897e-ed20b31fa904.gif)
 
