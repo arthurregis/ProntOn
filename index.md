@@ -45,6 +45,12 @@ O intuito do ProntOn e ser uma aplicação desktop simples e prática, todas a
 <br>
 <br>
 <div style="color:white; background-color:#212121; width:100%; height:70px; text-align:center; font-size:20pt"> Wiki ProntOn</div>
+Nessa sessão, iremos fazer um pequeno tour pela nossa aplicação. Ao final do tour, você tera os conhecimentos de cada funcionalidade presente no nosso sistema.
+
+### Login
+Ao abrir nosso sistema, a primeira coisa que se deve fazer e efetuar o login. Tenha em mente que para efetuar o login no sistema seus dados terão que ser cadastrados na nossa base de dados por alguém já credenciado e que tenha acesso às funções de cadastro.
+![print_login](https://user-images.githubusercontent.com/57187549/113359438-268cdd80-931e-11eb-9bf6-c3939e035263.png)
+Para efetuar o login, basta inserir um CPF valido e cadastrado na nossa base de dados, e posteriormente sua senha. Você sera direcionado para a tela de acordo com a categoria de sua conta. Podendo ser direcionado para a tela de Administrador, Medico, Recepcionista ou Paciente.
 
 ## Equipe ProntOn
 Documentação e Back-end: [Arthur Régis de Oliveira Gomes.](https://github.com/arthurregis)
