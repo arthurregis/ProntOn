@@ -44,7 +44,7 @@ O intuito do ProntOn e ser uma aplicação desktop simples e prática, todas a
 <br>
 <br>
 <br>
-<div style="color:white; background-color:#212121; width:100%; height:128px;"> Wiki ProntOn</div>
+<div style="color:white; background-color:#212121; width:100%; height:70px; text-aligh:center; font-size:20pt"> Wiki ProntOn</div>
 
 ## Equipe ProntOn
 Documentação e Back-end: [Arthur Régis de Oliveira Gomes.](https://github.com/arthurregis)
