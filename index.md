@@ -44,7 +44,7 @@ O intuito do ProntOn e ser uma aplicação desktop simples e prática, todas a
 <br>
 <br>
 <br>
-<div class="outer"> Wiki ProntOn</div>
+<div class="outer" style="width: 100vw"> Wiki ProntOn</div>
 
 ## Equipe ProntOn
 Documentação e Back-end: [Arthur Régis de Oliveira Gomes.](https://github.com/arthurregis)
