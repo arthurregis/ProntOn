@@ -55,6 +55,7 @@ Para efetuar o login, basta inserir um CPF valido e cadastrado na nossa base de 
 ### Tela do Administrador
 A tela do administrador conta com uma tabela robusta na qual o administrador poderá visualizar todos os outros usuários cadastrados na base de dados do sistema. Assim como editar os dados de qualquer pessoa, excluir e visualizar.
 ![Tela_adm](https://user-images.githubusercontent.com/57187549/113360669-a0be6180-9320-11eb-985a-584fa71f7555.png)
+<br>
 O administrador deve clicar em algum usuário na tabela a fim de editar, excluir ou simplesmente visualizar os dados desse usuário.
 ![2021-04-01 19-55-58](https://user-images.githubusercontent.com/57187549/113362328-825a6500-9324-11eb-8510-b123f7a48791.gif)
 O Administrador poderá também cadastra na base de dados da aplicação Recepcionistas e Médicos.
@@ -82,6 +83,7 @@ A recepcionista também sera capaz de abrir o chat para atender de forma remota 
 ### Tela do Paciente
 Ao logar como paciente no nosso sistema. O paciente poderá visualizar na tabela todas as suas consultas marcadas. O paciente também poderá visualizar uma consulta. Basta clicar em um item na tabela e clicar em visualizar.
 ![tela_paciente](https://user-images.githubusercontent.com/57187549/113365018-5a223480-932b-11eb-873b-2d8fc66a9ed3.png)
+<br>
 O paciente também poderá gerar um PDF contendo todas as suas consultas. Basta clicar no botão com o símbolo de PDF.
 ![2021-04-01 20-49-20](https://user-images.githubusercontent.com/57187549/113365218-f1878780-932b-11eb-9625-3995e2129073.gif)
 O paciente também sera capaz de abrir o chat, essa e uma das ferramentas de atendimento de forma remota.Por exemplo, o paciente não precisara se locomover de sua residência para o hospital ou clinica na qual faz o uso desta aplicação para apenas marcar uma consulta.
