@@ -1,7 +1,7 @@
 ## Bem vindo(a) ao ProntOn
 
 <iframe width="420" height="315"
-src="https://youtu.be/XR5pt4ZYTpE">
+src="https://www.youtube.com/embed/XR5pt4ZYTpE?autoplay=1&mute=1">
 </iframe>
 
 Um dos problemas dos prontuários clínicos, são o uso do papel, que causa um acesso
