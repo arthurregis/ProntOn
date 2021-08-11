@@ -9,6 +9,8 @@ import services.conexao.Conexao;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import main.java.pessoa.AdmPessoa;
 import main.java.pessoa.Pessoa;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,7 +32,7 @@ public class admDAO {
             
             while(rs.next()){
                 
-                Pessoa pes = new Pessoa();
+                AdmPessoa pes = new AdmPessoa();
                 
                 pes.setNome(rs.getString("nome"));
                 pes.setSobrenome(rs.getString("sobrenome"));
@@ -51,7 +53,7 @@ public class admDAO {
     }
 
     public Pessoa getPessoa(String cpf) {
-        Pessoa pessoa = new Pessoa();
+    	AdmPessoa pessoa = new AdmPessoa();
         
         try {
       
