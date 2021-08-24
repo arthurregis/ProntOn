@@ -9,7 +9,7 @@ package main.java.pessoa;
  *
  * @author cleit
  */
-public abstract class Pessoa {
+public class Pessoa {
     
     private String nome;
     private String sobrenome;
